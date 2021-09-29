@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $fontSize;
+    font-weight: $fontWeightNormal;
+    color: $colorGray;
+    background: $colorGray;
+
+    display: grid;
+    place-items: center;
+}

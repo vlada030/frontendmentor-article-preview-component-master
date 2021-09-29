@@ -1,0 +1,17 @@
+.container {
+    width: 375px;
+    height: 100vh;
+    background: $colorWhite;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 325px;
+}
+
+.card-header {
+    img {
+        width: 325px;
+    }
+}
