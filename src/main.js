@@ -7,12 +7,15 @@ const menu = document.getElementById('menu')
 const text = document.getElementById('text')
 
 button.addEventListener('click', () => {
-    // user.style.display = 'none';
-    // menu.style.display = 'flex';
-    wrapper.classList.add('card-footer--active')
-    text.classList.add('card-text--active')
-    menu.style.display = 'flex'
-    user.style.display = 'none'
+    if (menu.style.display == 'flex') {
+        menu.style.display = 'none' 
+        button.style.background = '#ecf2f8'
+        button.style.color = '#6d7f97'
+    } else {
+        menu.style.display = 'flex'
+        button.style.background = '#6d7f97'
+        button.style.color = '#ecf2f8'
+    }
 
 })
 

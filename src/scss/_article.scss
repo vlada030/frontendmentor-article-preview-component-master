@@ -13,6 +13,9 @@
 
 .card {
     width: 325px;
+    background-color: $colorWhiteSnow;
+    border-radius: 10px;
+
     @include media(tablet) {
         width: 768px;
         display: flex;
@@ -27,27 +30,30 @@
     img {
         width: 325px;
         height: 200px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         object-fit: cover;
         object-position: 0 -15px;
     }
-
+    
     @include media(tablet) {
         margin: 0;
-
+        
         img {
             width: 285px;
             height: 280px;
-            object-position: 0 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
             border-bottom-left-radius: 15px;
             border-top-left-radius: 15px;
+            object-position: 0 0;
             margin-right: 40px;
         }
     }
 }
 
 .card-body {
-    width: 255px;
-    margin: 0 auto;
+    padding: 0 35px 17px 35px;
 
     @include media(tablet) {
         width: 345px;
@@ -83,29 +89,13 @@
 }
 
 .card-footer {
-    width: 325px;
-    padding: 0 35px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
 
-    &--active {
-        background-color: $colorGrayDark;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-    
-    @include media(tablet) {
-        width: 350px;
-        padding: 0;
-    }
-
-    .user-wrapper {
+    .wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         img {
             width: 40px;
@@ -123,10 +113,20 @@
     }
 
     .hidden-menu {
-        color: $colorWhite;
+        width: calc(100% + 70px);
+        height: 70px;
+
+        position: absolute;
+        top: -15px;
+        left: -35px;
+
+        color: $colorGrayLight;
         text-transform: uppercase;
         font-weight: $fontWeightNormal;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
+        background-color: $colorGrayDark;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         padding: 23px 0;
         
         display: flex;
@@ -145,19 +145,20 @@
             justify-content: center;
             margin-right: 20px;
             &:last-of-type {
-                margin-right: 0;
+                margin-right: 82px;
             }
         }
     }
 
     .btn {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
         color: $colorGray;
         border: none;
         border-radius: 50%;
         cursor: pointer;
         background-color: $colorWhite;
+        z-index: 50;
 
         &--active {
             color: $colorWhite;
