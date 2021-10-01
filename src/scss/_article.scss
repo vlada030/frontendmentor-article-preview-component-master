@@ -7,7 +7,7 @@
     place-items: center;
 
     @include media(tablet) {
-        width: 768px;
+        width: 785px;
     }
 }
 
@@ -17,7 +17,7 @@
     border-radius: 10px;
 
     @include media(tablet) {
-        width: 768px;
+        width: 725px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -58,6 +58,8 @@
     @include media(tablet) {
         width: 359px;
         padding: 0;
+        margin-right: 41px;
+        
     }
 
     .card-title {

@@ -8,7 +8,7 @@ module.exports = {
     entry: { index: path.resolve(__dirname, "src", "main.js") },
     output: {
         path: path.resolve(__dirname, "build"),
-        assetModuleFilename: "images/[hash][ext][query]",
+        assetModuleFilename: "assets/[hash][ext][query]",
     },
 
     devServer: {
@@ -43,6 +43,10 @@ module.exports = {
 
             {
                 test: /\.(png|svg|jpe?g|gif)$/,
+                type: "asset/resource",
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: "asset/resource",
             },
         ],
