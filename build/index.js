@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=document.getElementById("socials-btn"),t=document.getElementById("menu");e.addEventListener("click",(function(){"flex"==t.style.display?(t.style.display="none",e.style.background="#ecf2f8",e.style.color="#6d7f97"):(t.style.display="flex",e.style.background="#6d7f97",e.style.color="#ecf2f8")}))})();
