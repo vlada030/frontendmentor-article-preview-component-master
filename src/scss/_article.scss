@@ -15,6 +15,7 @@
     width: 325px;
     background-color: $colorWhiteSnow;
     border-radius: 10px;
+    box-shadow: 5px 15px 20px rgba($colorGrayDark, 0.1);
 
     @include media(tablet) {
         width: 725px;
@@ -38,6 +39,7 @@
     
     @include media(tablet) {
         margin: 0;
+        height: 280px;
         
         img {
             width: 285px;
@@ -103,6 +105,7 @@
             width: 40px;
             border-radius: 50%;
             margin-right: 15px;
+            box-shadow: 5px 5px 10px rgba($colorGrayDark, 0.1);
         }
 
         .user {

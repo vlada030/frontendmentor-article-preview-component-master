@@ -10,8 +10,10 @@ body {
     font-weight: $fontWeightNormal;
     color: $colorGray;
     line-height: $lineHeight;
-    background: #ffff;
+    background: $colorWhite;
 
     display: grid;
     place-items: center;
+
+    min-height: 100vh;
 }
